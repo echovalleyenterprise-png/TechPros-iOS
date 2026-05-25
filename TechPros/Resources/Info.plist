@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Tech Pros Field Tech</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.techpros.app</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Tech Pros needs camera access to capture equipment photos for troubleshooting.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Tech Pros needs microphone access for voice input so you can ask questions hands-free.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Tech Pros needs photo library access to upload equipment photos for troubleshooting.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Tech Pros uses speech recognition so you can ask questions hands-free while on the job.</string>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>
