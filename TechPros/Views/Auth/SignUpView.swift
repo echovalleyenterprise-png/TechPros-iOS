@@ -106,15 +106,8 @@ struct SignUpView: View {
 
     private var step4: some View {
         VStack(alignment: .leading, spacing: 14) {
-            stepHeader(icon: "briefcase.fill", title: "Your role", subtitle: "Optional — helps us tailor the experience")
+            stepHeader(icon: "phone.fill", title: "Your phone number", subtitle: "Optional — for account recovery")
             AuthTextField(icon: "phone", placeholder: "Phone number (optional)", text: $vm.signupPhone, keyboardType: .phonePad)
-
-            Picker("Role", selection: $vm.signupRole) {
-                Text("Installation Tech").tag("tech")
-                Text("Customer").tag("customer")
-            }
-            .pickerStyle(.segmented)
-            .padding(.top, 4)
         }
     }
 

@@ -84,7 +84,7 @@ final class AuthViewModel: ObservableObject {
                 fullName: signupFullName,
                 email: signupEmail,
                 password: signupPassword,
-                role: signupRole,
+                role: "tech",
                 phone: signupPhone
             )
             signupComplete = result.requiresEmailConfirmation

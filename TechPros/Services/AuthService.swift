@@ -30,7 +30,7 @@ final class AuthService {
             let requiresEmailConfirmation: Bool?
             let error: String?
         }
-        let resp: Response = try await APIClient.shared.postRaw(
+        let resp: Response = try await APIClient.shared.postPublic(
             "/api/auth/signup",
             body: ["fullName": fullName, "email": email, "password": password, "role": role, "phone": phone]
         )
@@ -44,7 +44,7 @@ final class AuthService {
         // Use the Vercel API route which triggers Supabase reset email
         struct Body: Encodable { let email: String }
         struct Resp: Decodable { let success: Bool?; let error: String? }
-        let resp: Resp = try await APIClient.shared.postRaw(
+        let resp: Resp = try await APIClient.shared.postPublic(
             "/api/auth/forgot-password",
             body: ["email": email]
         )
@@ -55,7 +55,7 @@ final class AuthService {
 
     func resendVerification(email: String) async throws {
         struct Resp: Decodable { let success: Bool?; let error: String? }
-        let resp: Resp = try await APIClient.shared.postRaw(
+        let resp: Resp = try await APIClient.shared.postPublic(
             "/api/auth/resend-verification",
             body: ["email": email]
         )

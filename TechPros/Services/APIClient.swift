@@ -94,6 +94,17 @@ final class APIClient {
         return try await perform(req)
     }
 
+    // MARK: - POST (no auth, for signup/forgot-password/resend-verification)
+
+    func postPublic<T: Decodable>(_ path: String, body: [String: Any]) async throws -> T {
+        guard let url = URL(string: base + path) else { throw APIError.invalidURL }
+        var req = URLRequest(url: url)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await perform(req)
+    }
+
     // MARK: - DELETE
 
     func delete(_ path: String) async throws {
